@@ -31,7 +31,7 @@ flutter:
   assets:
     - assets/bible_text.txt
     - assets/wedase_maryam.txt
-
+    - assets/texts/melkea_maryam.txt
 
   # Add custom fonts if needed
   # fonts:

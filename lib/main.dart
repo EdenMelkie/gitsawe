@@ -5,6 +5,7 @@ import 'fill.dart'; // Make sure this import matches your file location
 import 'about.dart'; // Add this import
 import 'settings.dart';
 import 'Sunday.dart';
+import 'melkea_maryam.dart';
 import 'gitsawe_home.dart';
 import 'calendar_page.dart' as calendar;
 import 'bahirehasab_screen.dart';
@@ -112,8 +113,8 @@ class _MainNavigationState extends State<MainNavigation> {
               onTap: () => _onSelect('ውዳሴ ማርያም ዘሰንበተ ክርስትያን ቅድስት', const Sunday()),
             ),
             ListTile(
-              title: const Text('አንቀጸ ብርሃን'),
-              onTap: () => _onSelect('አንቀጸ ብርሃን', const Anqetse_Birhan()),
+              title: const Text('መልክአ ማርያም'),
+              onTap: () => _onSelect('መልክአ ማርያም', const MelkeaMaryamFromFile()),
             ),
             ListTile(
               title: Text('ባሕረ ሃሳብ'),
