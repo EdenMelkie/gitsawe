@@ -113,6 +113,10 @@ class _MainNavigationState extends State<MainNavigation> {
               onTap: () => _onSelect('ውዳሴ ማርያም ዘሰንበተ ክርስትያን ቅድስት', const Sunday()),
             ),
             ListTile(
+              title: const Text('አንቀጸ ብርሃን'),
+              onTap: () => _onSelect('አንቀጸ ብርሃን', const Anqetse_Birhan()),
+            ),
+            ListTile(
               title: const Text('መልክአ ማርያም'),
               onTap: () => _onSelect('መልክአ ማርያም', const MelkeaMaryamFromFile()),
             ),
