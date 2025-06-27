@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'bahirehasab.dart';
 
 class GitsaweHome extends StatelessWidget {
+  const GitsaweHome({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

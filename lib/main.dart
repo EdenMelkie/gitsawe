@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:gitsawe/WidaseMaryam.dart';
+import 'package:gitsawe/anqetse_birhan.dart';
 import 'fill.dart'; // Make sure this import matches your file location
 import 'about.dart'; // Add this import
 import 'settings.dart';
-import 'calendar.dart';
+import 'Sunday.dart';
 import 'gitsawe_home.dart';
-import 'app_settings.dart';
-import 'bahrehasab_screen.dart';
-import 'calendar_page.dart';
+import 'calendar_page.dart' as calendar;
 import 'bahirehasab_screen.dart';
+import 'calendar_gitsawe.dart' as gitsawe;
+import 'wedase_maryam.dart' as myOld;
+import 'wedase_text_page.dart';
+import 'widase.dart';
+import 'wednsday.dart';
+import 'Thursday.dart';
+import 'Friday.dart';
+import 'Saturday.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,11 +61,11 @@ class _MainNavigationState extends State<MainNavigation> {
         child: ListView(
           children: [
             DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
               child: Text(
                 'ግጻዌ አማራጮች',
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
-              decoration: BoxDecoration(color: Colors.blue),
             ),
             ListTile(
               title: Text('መዝገብ/ፍለጋ'),
@@ -67,16 +75,48 @@ class _MainNavigationState extends State<MainNavigation> {
               title: Text('ዋና ገፅ'),
               onTap: () => _onSelect("ዋና", GitsaweHome()),
             ),
+            // ListTile(
+            //   title: Text('ባሕረ ሃሳብ'),
+            //   onTap: () => _onSelect("ባሕረ ሃሳብ", BahreHasabScreen()),
+            // ),
+            ListTile(
+              title: const Text('ጸሎተ ዘወትር'),
+              onTap: () => _onSelect('ጸሎተ ዘወትር', const WidaseMaryamPage()),
+            ),
+            ListTile(
+              title: const Text('ውዳሴ ማርያም ዘሰኑይ'),
+              onTap: () => _onSelect('ውዳሴ ማርያም ዘሰኑይ', const WudaseMaryamPage()),
+            ),
+            ListTile(
+              title: const Text('ውዳሴ ማርያም ዘሰሉስ'),
+              onTap: () => _onSelect('ውዳሴ ማርያም ዘሰሉስ', const Wudase()),
+            ),
+            ListTile(
+              title: const Text('ውዳሴ ማርያም ዘረቡዕ'),
+              onTap: () => _onSelect('ውዳሴ ማርያም ዘረቡዕ', const Wednsday()),
+            ),
+            ListTile(
+              title: const Text('ውዳሴ ማርያም ዘሐሙስ'),
+              onTap: () => _onSelect('ውዳሴ ማርያም ዘሐሙስ', const Thursday()),
+            ),
+            ListTile(
+              title: const Text('ውዳሴ ማርያም ዘዓርብ'),
+              onTap: () => _onSelect('ውዳሴ ማርያም ዘዓርብ', const Friday()),
+            ),
+            ListTile(
+              title: const Text('ውዳሴ ማርያም ዘቀዳሚት ሰንበት'),
+              onTap: () => _onSelect('ውዳሴ ማርያም ዘቀዳሚት ሰንበት', const Saturday()),
+            ),
+            ListTile(
+              title: const Text('ውዳሴ ማርያም ዘሰንበተ ክርስትያን ቅድስት'),
+              onTap: () => _onSelect('ውዳሴ ማርያም ዘሰንበተ ክርስትያን ቅድስት', const Sunday()),
+            ),
+            ListTile(
+              title: const Text('አንቀጸ ብርሃን'),
+              onTap: () => _onSelect('አንቀጸ ብርሃን', const Anqetse_Birhan()),
+            ),
             ListTile(
               title: Text('ባሕረ ሃሳብ'),
-              onTap: () => _onSelect("ባሕረ ሃሳብ", BahreHasabScreen()),
-            ),
-            ListTile(
-              title: Text('ባሕረ ሃሳብ2'),
-              onTap: () => _onSelect("ባሕረ ሃሳብ", BahireHasabScreen()),
-            ),
-            ListTile(
-              title: Text('ባሕረ ሃሳብ3'),
               onTap: () => _onSelect("ባሕረ ሃሳብ", BahireHasabScreen()),
             ),
             ListTile(
@@ -84,7 +124,18 @@ class _MainNavigationState extends State<MainNavigation> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CalendarPage()),
+                  MaterialPageRoute(
+                    builder: (context) => gitsawe.CalendarPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('ባሕረ ሃሳብ'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => calendar.CalendarPage()),
                 );
               },
             ),

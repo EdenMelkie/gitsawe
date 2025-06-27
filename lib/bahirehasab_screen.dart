@@ -11,8 +11,8 @@ class BahireHasabScreen extends StatefulWidget {
     this.initialYear,
     this.initialMonth,
     this.initialDay,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _BahireHasabScreenState createState() => _BahireHasabScreenState();
@@ -182,24 +182,24 @@ class _BahireHasabScreenState extends State<BahireHasabScreen> {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: _calculate,
-                      child: _isLoading
-                          ? CircularProgressIndicator(color: Colors.white)
-                          : Text('አስላ'),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.teal,
                         padding: EdgeInsets.symmetric(vertical: 15),
                       ),
+                      child: _isLoading
+                          ? CircularProgressIndicator(color: Colors.white)
+                          : Text('አስላ'),
                     ),
                   ),
                   SizedBox(width: 10),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: _reset,
-                      child: Text('አጽዳ'),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey,
                         padding: EdgeInsets.symmetric(vertical: 15),
                       ),
+                      child: Text('አጽዳ'),
                     ),
                   ),
                 ],

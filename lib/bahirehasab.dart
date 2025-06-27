@@ -94,7 +94,7 @@ class Bahrehasab {
       bmt = "ቀኑ፡ ጥቅምት : $BMT / $year. ዕለቱ $Mtday = ተውሳኩ => $tewsakDay";
     }
 
-    MebajaHamer = (Metqie + tewsakDay) % 30;
+    MebajaHamer = (BMT + tewsakDay) % 30;
     if (MebajaHamer == 0) MebajaHamer = 30;
 
     Lelit = Abeqtie + (month ~/ 2) + date;
@@ -113,17 +113,17 @@ class Bahrehasab {
       mn = 6;
     }
 
-    nn = _addEthiopianDays(year, mn, MebajaHamer, 0) + ": ሰኞ";
-    ay = _addEthiopianDays(year, mn, MebajaHamer, 14) + ": ሰኞ";
-    dz = _addEthiopianDays(year, mn, MebajaHamer, 41) + ": �ለቃ";
-    hn = _addEthiopianDays(year, mn, MebajaHamer, 62) + ": እሑድ";
-    st = _addEthiopianDays(year, mn, MebajaHamer, 67) + ": ዓርብ";
-    ta = _addEthiopianDays(year, mn, MebajaHamer, 69) + ": እሑድ";
-    rc = _addEthiopianDays(year, mn, MebajaHamer, 93) + ": ረቡዕ";
-    it = _addEthiopianDays(year, mn, MebajaHamer, 108) + ": ኀሙስ";
-    ps = _addEthiopianDays(year, mn, MebajaHamer, 118) + ": እሑድ";
-    hw = _addEthiopianDays(year, mn, MebajaHamer, 119) + ": ሰኞ";
-    dt = _addEthiopianDays(year, mn, MebajaHamer, 121) + ": ረቡዕ";
+    nn = "${_addEthiopianDays(year, mn, MebajaHamer, 0)}: ሰኞ";
+    ay = "${_addEthiopianDays(year, mn, MebajaHamer, 14)}: ሰኞ";
+    dz = "${_addEthiopianDays(year, mn, MebajaHamer, 41)}: �ለቃ";
+    hn = "${_addEthiopianDays(year, mn, MebajaHamer, 62)}: እሑድ";
+    st = "${_addEthiopianDays(year, mn, MebajaHamer, 67)}: ዓርብ";
+    ta = "${_addEthiopianDays(year, mn, MebajaHamer, 69)}: እሑድ";
+    rc = "${_addEthiopianDays(year, mn, MebajaHamer, 93)}: ረቡዕ";
+    it = "${_addEthiopianDays(year, mn, MebajaHamer, 108)}: ኀሙስ";
+    ps = "${_addEthiopianDays(year, mn, MebajaHamer, 118)}: እሑድ";
+    hw = "${_addEthiopianDays(year, mn, MebajaHamer, 119)}: ሰኞ";
+    dt = "${_addEthiopianDays(year, mn, MebajaHamer, 121)}: ረቡዕ";
   }
 
   // Helper methods
@@ -155,7 +155,7 @@ class Bahrehasab {
         return "ቀዳሚት ሰንበት";
       case 6:
         tewsakDay = 7;
-        return "ሰንበተ �ርስትያን ቅድስት";
+        return "ሰንበተ ክርስትያን ቅድስት";
       case 0:
         tewsakDay = 6;
         return "ሰኞ";

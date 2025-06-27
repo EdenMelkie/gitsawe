@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'bahirehasab.dart';
+import '../bahirehasab.dart';
 
 class BahreHasabScreen extends StatefulWidget {
+  const BahreHasabScreen({super.key});
+
   @override
   _BahireHasabScreenState createState() => _BahireHasabScreenState();
 }
@@ -138,22 +140,22 @@ class _BahireHasabScreenState extends State<BahreHasabScreen> {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: _calculate,
-                      child: Text('አስላ'),
                       style: ElevatedButton.styleFrom(
                         // primary: Colors.teal,
                         padding: EdgeInsets.symmetric(vertical: 15),
                       ),
+                      child: Text('አስላ'),
                     ),
                   ),
                   SizedBox(width: 10),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: _reset,
-                      child: Text('አጽዳ'),
                       style: ElevatedButton.styleFrom(
                         // primary: Colors.grey,
                         padding: EdgeInsets.symmetric(vertical: 15),
                       ),
+                      child: Text('አጽዳ'),
                     ),
                   ),
                 ],
